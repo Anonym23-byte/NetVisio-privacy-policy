@@ -1,142 +1,472 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kebijakan Privasi & Kepatuhan - NetVisio</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            color: #1a202c;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 8px;
-            margin-top: 32px;
-        }
-        h1 {
-            font-size: 24px;
-            text-align: center;
-            border-bottom: none;
-        }
-        .subtitle {
-            text-align: center;
-            font-weight: bold;
-            color: #4a5568;
-            margin-bottom: 24px;
-        }
-        .badge {
-            display: inline-block;
-            background-color: #e6fffa;
-            color: #319795;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-top: 4px;
-        }
-        ul, ol {
-            margin-top: 12px;
-            margin-bottom: 20px;
-        }
-        li {
-            margin-bottom: 12px;
-        }
-        blockquote {
-            background: #f7fafc;
-            border-left: 4px solid #cbd5e0;
-            padding: 12px 16px;
-            margin: 0;
-            font-family: monospace;
-            font-size: 14px;
-        }
-        a {
-            color: #3182ce;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kebijakan Privasi, Kepatuhan Data Safety & Penghapusan Akun - NetVisio</title>
+  <meta name="description" content="Dokumentasi resmi Kebijakan Privasi, Data Safety Google Play, dan Formulir Penghapusan Akun Pengguna untuk aplikasi NetVisio (com.netvisio.app).">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #0f172a;
+      --card-border: #1e293b;
+      --primary: #38bdf8;
+      --primary-dim: rgba(56, 189, 248, 0.1);
+      --accent: #10b981;
+      --accent-dim: rgba(16, 185, 129, 0.1);
+      --danger: #ef4444;
+      --danger-dim: rgba(239, 68, 68, 0.1);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --font-mono: 'SF Mono', Consolas, 'Courier New', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 24px 16px 80px 16px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Header & Brand */
+    .header {
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .badge-verified {
+      display: inline-block;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--text);
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .meta-app {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 16px 0 6px 0;
+    }
+
+    p, li {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Badges */
+    .badge-code {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--primary);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin: 4px 0;
+    }
+
+    /* Highlight Deletion Box */
+    .deletion-box {
+      border: 2px solid var(--danger);
+      background: rgba(239, 68, 68, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 14px;
+    }
+
+    .btn-delete {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ef4444;
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      text-decoration: none;
+      margin-top: 14px;
+      transition: background 0.2s;
+    }
+
+    .btn-delete:hover {
+      background: #dc2626;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 13px;
+    }
+
+    th, td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    th {
+      color: var(--text);
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    td {
+      color: var(--text-muted);
+    }
+
+    /* Code Snippet */
+    .code-block {
+      background: #040711;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 14px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+
+    /* Contact List */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .contact-item {
+      background: #090d16;
+      border: 1px solid var(--card-border);
+      padding: 12px 16px;
+      border-radius: 8px;
+    }
+
+    .contact-item label {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .contact-item span {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      font-family: var(--font-mono);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Kebijakan Privasi & Kepatuhan Google Play</h1>
-    <div class="subtitle">
-        DOKUMENTASI RESMI DATA SAFETY, PRIVASI UU PDP / GDPR & TRANSPARANSI PERANGKAT<br>
-        🔗 <a href="https://netvisio.app/compliance" target="_blank">https://netvisio.app/compliance</a>
-    </div>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="badge-verified">✓ Google Play Developer Policy Compliant</div>
+      <h1>Kebijakan Privasi & Kepatuhan Data Safety</h1>
+      <div class="subtitle">NetVisio (Visual IP & VLSM Engineering Suite)</div>
+      <div class="meta-app">Package ID: com.netvisio.app • Versi Rilis: 1.0.0 • Pembaruan: 2026</div>
+    </header>
 
-    <h2>Deklarasi Kepatuhan Google Play Console</h2>
-    <p>NetVisio berkomitmen penuh terhadap transparansi data pengguna, privasi mutlak, serta kepatuhan pada Google Play Developer Policy, UU Pelindungan Data Pribadi (UU PDP No. 27/2022), GDPR, dan COPPA.</p>
+    <!-- 1. Deklarasi Kepatuhan -->
+    <section class="card">
+      <h2>🛡️ 1. Ikhtisar & Deklarasi Kepatuhan Hukum</h2>
+      <p>
+        NetVisio berkomitmen penuh melindungi hak privasi pengguna dan mematuhi seluruh regulasi perlindungan data yang berlaku, meliputi:
+      </p>
+      <ul>
+        <li><strong>Undang-Undang Perlindungan Data Pribadi (UU PDP No. 27/2022)</strong> Republik Indonesia.</li>
+        <li><strong>General Data Protection Regulation (EU GDPR)</strong>.</li>
+        <li><strong>Google Play Developer Distribution Agreement & User Data Policy</strong> (termasuk Data Safety & Account Deletion).</li>
+        <li><strong>Children's Online Privacy Protection Act (COPPA)</strong>.</li>
+      </ul>
+      <p>
+        Aplikasi dirancang dengan arsitektur <em>Local-First</em> di mana seluruh kalkulasi matematika IPv4, IPv6, matriks VLSM, dekomposisi biner 32-bit, dan sintaks konfigurasi router dieksekusi langsung di perangkat Anda tanpa pengiriman data ke server pihak ketiga.
+      </p>
+    </section>
 
-    <h2>Pengungkapan Izin Perangkat (Device Permissions)</h2>
-    <ul>
-        <li>
-            <strong>📋 Papan Klip (Clipboard / Copy-Paste)</strong><br>
-            <span class="badge">READ/WRITE_CLIPBOARD • EXPLICIT ACTION ONLY</span><br>
-            Hanya digunakan saat pengguna secara eksplisit menekan tombol salin untuk menyalin alamat IP, Subnet Mask, atau skrip konfigurasi CLI router ke clipboard. Aplikasi tidak pernah membaca data pribadi pengguna di papan klip.
-        </li>
-        <li>
-            <strong>📳 Umpan Balik Taktil (Vibrate / Haptics)</strong><br>
-            <span class="badge">android.permission.VIBRATE • TACTILE SLIDER UX</span><br>
-            Memberikan getaran halus saat menggeser slider CIDR /0-/32 dan menekan tombol untuk meningkatkan pengalaman taktil teknis.
-        </li>
-        <li>
-            <strong>💾 Penyimpanan Lokal (Local Storage)</strong><br>
-            <span class="badge">PRIVATE APP SANDBOX (AsyncStorage) • OFFLINE ONLY</span><br>
-            Menyimpan preferensi konfigurasi dan proyek subnet secara privat di perangkat (AsyncStorage). File PDF skenario/jobsheet hanya diproses secara lokal pada memori perangkat.
-        </li>
-    </ul>
+    <!-- 2. Pengungkapan Izin Perangkat -->
+    <section class="card">
+      <h2>📱 2. Pengungkapan Izin Perangkat (Device Permissions)</h2>
+      <p>NetVisio hanya meminta izin minimal yang esensial untuk fungsionalitas teknis:</p>
 
-    <h2>Ringkasan Formulir Keamanan Data (Data Safety Form)</h2>
-    <ul>
-        <li><strong>🛡️ Tidak Ada Data Pribadi yang Dikumpulkan:</strong> Nama, email, nomor kontak, dokumen identitas, lokasi GPS, dan data finansial: 0% dikumpulkan.</li>
-        <li><strong>⚡ Arsitektur 100% Local-First:</strong> Semua logika matematika subnetting, matriks VLSM, dekomposisi 32-bit biner, dan generator CLI dieksekusi langsung di CPU perangkat tanpa server eksternal.</li>
-        <li><strong>🤖 Transparansi Asisten AI (NetTutor):</strong> Fitur opsional yang hanya mengirimkan kueri subnet melalui enkripsi TLS 1.3 via proksi Cloudflare Workers. Tidak ada token identifikasi profil pengguna yang disimpan.</li>
-    </ul>
+      <h3>📋 Papan Klip (Clipboard / Copy-Paste)</h3>
+      <span class="badge-code">EXPLICIT USER ACTION ONLY</span>
+      <p>
+        Hanya diakses saat pengguna secara eksplisit menekan tombol salin (Copy) untuk menyalin hasil kalkulasi subnet, tabel VLSM, atau skrip CLI router. NetVisio tidak pernah memonitor atau membaca konten riwayat papan klip pribadi pengguna di latar belakang.
+      </p>
 
-    <h2>Kebijakan Privasi Lengkap (UU PDP & GDPR Compliance)</h2>
-    <ol>
-        <li><strong>Dasar Hukum & Ruang Lingkup:</strong> Kebijakan privasi ini berlaku untuk aplikasi mobile dan web NetVisio. Kebijakan ini tunduk pada Undang-Undang Republik Indonesia Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP), General Data Protection Regulation (EU GDPR), dan Kebijakan Program Pengembang Google Play.</li>
-        <li><strong>Prinsip Pemrosesan Data Mandiri:</strong> NetVisio beroperasi secara mandiri di perangkat pengguna. Alamat IP yang dihitung (misal: 192.168.1.0/24, 10.0.0.0/8, dsb.) adalah data rekayasa jaringan publik maupun privat standar RFC 1918 dan bukan merupakan data pribadi yang mengidentifikasi individu perseorangan.</li>
-        <li><strong>Hak Pengguna & Mekanisme Penghapusan Data (Data Erasure):</strong> Sesuai Pasal 37 UU PDP dan Pasal 17 GDPR (Right to Erasure), pengguna memiliki hak mutlak untuk menghapus seluruh data lokal kapan saja melalui tombol "RESET SEMUA DATA KALKULATOR & VLSM" di tab Pengaturan, atau dengan mencopot (uninstall) aplikasi dari perangkat.</li>
-    </ol>
+      <h3>📳 Umpan Balik Taktil (Haptics / Vibration)</h3>
+      <span class="badge-code">android.permission.VIBRATE</span>
+      <p>
+        Memberikan getaran haptik taktil saat pengguna menggeser slider CIDR (/0-/32) atau menekan tombol navigasi kalkulator untuk meningkatkan presisi teknisi.
+      </p>
 
-    <h2>Ketentuan Layanan & Lisensi Perangkat Lunak</h2>
-    <p>NetVisio dirilis dengan lisensi open source MIT. Standar jaringan didasarkan pada spesifikasi IETF (RFC 791, RFC 1918, RFC 3021, RFC 4632).</p>
-    
-    <blockquote>
-        <strong>MIT License</strong><br><br>
-        Copyright (c) 2026 NetVisio Team<br><br>
-        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.
-    </blockquote>
-    
-    <p><strong>Penafian Tanggung Jawab (Engineering Disclaimer):</strong> Skrip CLI dan hasil kalkulasi disediakan 'sebagaimana adanya' sebagai alat bantu perencanaan. Teknisi disarankan meninjau sintaks sebelum menerapkan di lingkungan produksi.</p>
+      <h3>💾 Penyimpanan Lokal Perangkat (Local Storage)</h3>
+      <span class="badge-code">SANDBOX STORAGE (AsyncStorage)</span>
+      <p>
+        Menyimpan preferensi konfigurasi pengguna, riwayat proyek subnetting, dan preferensi tema/bahasa secara lokal di ruang penyimpanan privat perangkat.
+      </p>
 
-    <h2>Kepatuhan Kebijakan Keluarga & Anak (COPPA)</h2>
-    <p>NetVisio ditujukan untuk khalayak umum termasuk siswa SMK TKJ, mahasiswa teknik, pengajar, dan profesional IT. Konten aman untuk semua usia tanpa materi sensitif.</p>
-    <ul>
-        <li>✓ Bebas konten dewasa, kekerasan, atau materi tidak pantas.</li>
-        <li>✓ 100% bebas dari segala jenis jaringan iklan komersial anak (No Ads).</li>
-        <li>✓ Tidak meminta tanggal lahir, nama anak, atau informasi sekolah pribadi.</li>
-        <li>✓ Digunakan sebagai materi penunjang pembelajaran Kurikulum Merdeka TKJ dan Sertifikasi Jaringan Komputer.</li>
-    </ul>
+      <h3>🌐 Akses Jaringan Internet</h3>
+      <span class="badge-code">android.permission.INTERNET</span>
+      <p>
+        Digunakan secara terbatas untuk fitur opsional: sinkronisasi profil akun teknisi, verifikasi email OTP, papan peringkat global (Leaderboard) via Cloudflare D1, dan konsultasi interaktif NetTutor AI via TLS 1.3 terenkripsi.
+      </p>
+    </section>
 
-    <h2>Informasi Kontak Pengembang & Dukungan</h2>
-    <ul>
-        <li><strong>Pengembang / Author:</strong> Nurul Ilham</li>
-        <li><strong>Email Dukungan Resmi:</strong> <a href="mailto:nurul.iiilham@gmail.com">nurul.iiilham@gmail.com</a></li>
-        <li><strong>Kontak / WhatsApp:</strong> <a href="https://wa.me/6281213633608">081213633608 (+62 812-1363-3608)</a></li>
-        <li><strong>Nama Aplikasi:</strong> NetVisio (Visual IP & VLSM Engineering Suite)</li>
-        <li><strong>Repositori Kode & Issue Tracker:</strong> <a href="https://github.com/netvisio/netvisio" target="_blank">github.com/netvisio/netvisio</a></li>
-        <li><strong>Status Distribusi:</strong> Google Play Production Build v1.0.0 (AAB Compliant)</li>
-    </ul>
+    <!-- 3. Google Play Data Safety Disclosures -->
+    <section class="card">
+      <h2>🔒 3. Formulir Keamanan Data (Google Play Data Safety)</h2>
+      <p>Rincian lengkap data yang dikumpulkan dan ditransmisikan oleh NetVisio:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Jenis Data</th>
+            <th>Tujuan Pengumpulan</th>
+            <th>Dibagikan ke Pihak Ketiga?</th>
+            <th>Enkripsi Transit?</th>
+            <th>Dapat Dihapus?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Nama Teknisi / Profil</strong></td>
+            <td>Manajemen Akun & Leaderboard</td>
+            <td>TIDAK (0%)</td>
+            <td>YA (HTTPS / TLS 1.3)</td>
+            <td>YA (Permanen)</td>
+          </tr>
+          <tr>
+            <td><strong>Alamat Email</strong></td>
+            <td>Autentikasi Akun, Login & OTP</td>
+            <td>TIDAK (0%)</td>
+            <td>YA (HTTPS / TLS 1.3)</td>
+            <td>YA (Permanen)</td>
+          </tr>
+          <tr>
+            <td><strong>Kata Sandi</strong></td>
+            <td>Keamanan Akun (Hashed & Salted)</td>
+            <td>TIDAK (0%)</td>
+            <td>YA (HTTPS / TLS 1.3)</td>
+            <td>YA (Permanen)</td>
+          </tr>
+          <tr>
+            <td><strong>Skor Ujian & XP</strong></td>
+            <td>Progres Gamifikasi & Ranking Global</td>
+            <td>TIDAK (0%)</td>
+            <td>YA (HTTPS / TLS 1.3)</td>
+            <td>YA (Permanen)</td>
+          </tr>
+          <tr>
+            <td><strong>Lokasi / GPS</strong></td>
+            <td>Tidak Dikumpulkan (0%)</td>
+            <td>TIDAK</td>
+            <td>N/A</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td><strong>Data Finansial / Kartu</strong></td>
+            <td>Tidak Dikumpulkan (0%)</td>
+            <td>TIDAK</td>
+            <td>N/A</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td><strong>Iklan & Pelacak Pihak Ketiga</strong></td>
+            <td>Bebas Iklan (0% Ads / 0% Trackers)</td>
+            <td>TIDAK</td>
+            <td>N/A</td>
+            <td>N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 4. PENGHAPUSAN AKUN & DATA (MANDATORY GOOGLE PLAY REQUIREMENT) -->
+    <section class="card" id="account-deletion">
+      <h2>🗑️ 4. Kebijakan & Formulir Permohonan Penghapusan Akun (Account & Data Deletion)</h2>
+      <p>
+        Sesuai dengan <strong>Google Play User Data Policy (Requirement for Account Deletion)</strong>, Pasal 37 UU PDP Indonesia, dan Pasal 17 EU GDPR (Right to Erasure), seluruh pengguna berhak menghapus akun, data pribadi, dan riwayat belajar mereka kapan saja.
+      </p>
+
+      <div class="deletion-box">
+        <h3 style="color: #ef4444; margin-top: 0;">Cara Menghapus Akun & Data Anda:</h3>
+        
+        <p><strong>Metode 1: Langsung di Dalam Aplikasi (In-App)</strong></p>
+        <ul>
+          <li>Buka aplikasi NetVisio di perangkat Anda.</li>
+          <li>Masuk ke tab <strong>Pengaturan (Settings)</strong>.</li>
+          <li>Pada kartu Profil Teknisi, klik tombol merah <strong>"Hapus Akun"</strong>.</li>
+          <li>Konfirmasi permohonan. Seluruh data profil, token login, skor XP, dan riwayat ujian di Cloudflare D1 akan dihapus secara permanen seketika.</li>
+        </ul>
+
+        <p style="margin-top: 12px;"><strong>Metode 2: Permohonan Melalui Web (Tanpa Memasang Ulang Aplikasi)</strong></p>
+        <p>
+          Jika Anda telah mencopot (uninstall) aplikasi atau tidak memiliki akses ke perangkat, Anda dapat mengajukan penghapusan akun langsung melalui formulir permohonan resmi pengembang:
+        </p>
+
+        <a class="btn-delete" href="mailto:nurul.iiilham@gmail.com?subject=Permohonan%20Penghapusan%20Akun%20NetVisio&body=Halo%20Tim%20NetVisio%2C%0A%0ASaya%20mengajukan%20permohonan%20penghapusan%20akun%20dan%20seluruh%20data%20pribadi%20terkait%20pada%20aplikasi%20NetVisio.%0A%0AEmail%20Akun%20Terdaftar%3A%20%5BIsi%20email%20Anda%20di%20sini%5D%0ANama%20Teknisi%3A%20%5BIsi%20nama%20Anda%20di%20sini%5D%0A%0ATerima%20kasih.">
+          ✉️ Ajukan Penghapusan Akun & Data via Email Resmi
+        </a>
+        <p style="font-size: 12px; color: var(--text-dim); margin-top: 8px;">
+          Permohonan akan diproses dan data akan dihapus permanen dari basis data Cloudflare D1 dalam waktu maksimal 3x24 jam kerja.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. Kepatuhan Anak & Usia (COPPA) -->
+    <section class="card">
+      <h2>👶 5. Kepatuhan Terhadap Kebijakan Keluarga & Anak (COPPA)</h2>
+      <p>
+        NetVisio adalah aplikasi alat bantu edukasi jaringan komputer (IP & Subnetting). Konten aplikasi dirancang aman untuk segala usia, termasuk pelajar SMK Teknik Komputer dan Jaringan (TKJ), mahasiswa teknik informatika, dan masyarakat umum:
+      </p>
+      <ul>
+        <li>100% bebas dari konten dewasa, kekerasan, atau materi tidak pantas.</li>
+        <li>100% bebas dari segala jenis jaringan iklan pihak ketiga (No Ads).</li>
+        <li>Tidak melacak lokasi geografis atau mengumpulkan informasi pribadi anak di bawah usia 13 tahun tanpa persetujuan orang tua/wali.</li>
+      </ul>
+    </section>
+
+    <!-- 6. Lisensi & Penafian Teknis -->
+    <section class="card">
+      <h2>📄 6. Lisensi Perangkat Lunak & Penafian Tanggung Jawab</h2>
+      <p>
+        NetVisio dirilis berdasarkan lisensi open-source MIT License. Kalkulasi teknis mengacu pada standar RFC IETF (RFC 791, RFC 1918, RFC 3021, RFC 4632).
+      </p>
+      <div class="code-block">
+MIT License - Copyright (c) 2026 NetVisio Team
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction.
+      </div>
+      <p>
+        <em>Penafian Rekayasa:</em> Skrip konfigurasi CLI Cisco, MikroTik, dan Juniper disediakan sebagai sarana simulasi dan edukasi. Teknisi disarankan memverifikasi sintaks sebelum menerapkannya pada perangkat keras produksi langsung.
+      </p>
+    </section>
+
+    <!-- 7. Kontak Resmi Pengembang -->
+    <section class="card">
+      <h2>📞 7. Informasi Kontak Resmi Pengembang</h2>
+      <p>Untuk pertanyaan terkait kebijakan privasi, pengelolaan data, atau permohonan penghapusan akun:</p>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <label>Nama Pengembang / Author</label>
+          <span>Nurul Ilham</span>
+        </div>
+        <div class="contact-item">
+          <label>Email Dukungan Resmi</label>
+          <span>nurul.iiilham@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <label>Kontak Telepon / WhatsApp</label>
+          <span>+62 812-1363-3608</span>
+        </div>
+        <div class="contact-item">
+          <label>Nama Aplikasi / Application ID</label>
+          <span>com.netvisio.app</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 NetVisio Engineering. Seluruh hak cipta dilindungi undang-undang.</p>
+      <p>Dokumentasi resmi Google Play Developer Console Compliance Hub.</p>
+    </footer>
+  </div>
 
 </body>
 </html>
